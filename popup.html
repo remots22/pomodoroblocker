@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Blocklist/Whitelist Plugin</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <ul class="tabs">
+      <li class="active"><a href="#global">Global</a></li>
+      <li><a href="#timer">Timer</a></li>
+      <li><a href="#reverse">Reverse</a></li>
+      <li><a href="#options">Options</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="global" class="tab active">
+        <div class="header-container">
+          <h2>Blocklist</h2>
+          <label class="switch"><input type="checkbox" id="blockToggle"><span class="slider round"></span></label>
+        </div>
+        <div class="list-container"><ul id="blocklist"></ul></div>
+        <div class="add-site"><input type="text" id="siteInput" placeholder="e.g https://www.neti.ee"><button id="addSiteButton">+</button></div>
+      </div>
+      <div id="timer" class="tab">
+        <p>Timer content goes here.</p>
+      </div>
+      <div id="reverse" class="tab">
+        <p class="explanation">Blocks all websites except for those on the whitelist - blocklist will be turned off</p>
+        <div class="header-container">
+          <h2>Whitelist</h2>
+          <label class="switch"><input type="checkbox" id="whitelistToggle"><span class="slider round"></span></label>
+        </div>
+        <div class="list-container"><ul id="whitelist"></ul></div>
+        <div class="add-site"><input type="text" id="whitelistInput" placeholder="e.g https://www.neti.ee"><button id="addWhitelistButton">+</button></div>
+      </div>
+      <div id="options" class="tab">
+        <p>Options content goes here.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="language-switch"><span id="langEng" class="lang-option">ENG</span> │ <span id="langEst" class="lang-option">EST</span></div>
+      <button id="clearAllButton" class="clear-all">Clear All</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
